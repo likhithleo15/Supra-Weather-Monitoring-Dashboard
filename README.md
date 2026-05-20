@@ -1,16 +1,131 @@
-# React + Vite
+# 🌦️ SUPRA WEATHER MONITORING DASHBOARD
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A futuristic real-time weather monitoring dashboard built using modern web technologies and integrated with **LabVIEW** for live environmental data visualization.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🚀 Project Overview
 
-## React Compiler
+The **SUPRA Weather Monitoring Dashboard** provides a visually immersive interface for monitoring:
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- 🌡️ Temperature
+- 💧 Humidity
+- 🌬️ Wind Velocity
+- ☁️ Weather Status
+- 📈 Temperature Trends
+- 🌀 Moisture Levels
 
-## Expanding the ESLint configuration
+The dashboard features a glowing cyberpunk-inspired UI with a rotating 3D globe centered around **Bengaluru, India**.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+# 🖼️ Dashboard Preview
+
+## Main Dashboard Interface
+
+## Dashboard View 1
+
+![Dashboard Preview 1](./Screenshot%202026-04-20%20214448.png)
+
+---
+
+## Dashboard View 2
+
+![Dashboard Preview 2](./Screenshot%202026-04-20%20214512.png)
+
+---
+
+## Dashboard View 3
+
+![Dashboard Preview 3](./Screenshot%202026-04-20%20214550.png)
+
+
+---
+
+# ✨ Features
+
+- 🌍 Interactive 3D Globe Visualization
+- 📡 Real-time Weather Monitoring
+- 📊 Live Temperature Trend Graphs
+- 💧 Dynamic Moisture Gauge
+- ⚡ LabVIEW Integration
+- 🎨 Futuristic Neon UI Design
+- 📈 Sensor-Based Environmental Analytics
+
+---
+
+# 🛠️ Technologies Used
+
+- HTML5
+- CSS3
+- JavaScript
+- Three.js
+- Chart.js
+- LabVIEW
+- Node.js
+
+---
+
+⚙️ Installation & Setup
+
+1️⃣ Clone Repository
+git clone https://github.com/likhithleo15/Supra-Weather-Monitoring-Dashboard.git
+
+2️⃣ Navigate to Project Folder
+cd Supra-Weather-Monitoring-Dashboard
+
+3️⃣ Install Dependencies
+npm install
+
+4️⃣ Run Development Server
+npm run dev
+or
+npm start
+
+🔗 LabVIEW Integration
+This dashboard is connected with LabVIEW for real-time sensor acquisition and monitoring.
+The incoming sensor values are dynamically updated into:
+Temperature Panel
+Humidity Index
+Wind Velocity
+Moisture Gauge
+Weather Condition Status
+
+📊 Sample Weather States
+Temperature	Humidity	Weather Status
+
+20.6°C	76.1%	Pleasant
+
+31.2°C	71.1%	Hot
+
+34.2°C	88.6%	Hot
+
+🎯 Future Improvements
+
+🌦️ Live API Weather Integration
+
+☁️ Cloud Database Storage
+
+📱 Mobile Responsive UI
+
+🔔 Weather Alert Notifications
+
+🤖 AI-Based Forecasting
+
+📍 Multiple Location Monitoring
+
+👨‍💻 Developed By
+TEAM SUPRA
+
+⭐ Support
+
+If you like this project:
+
+⭐ Star the repository
+
+🍴 Fork the project
+
+🛠️ Contribute improvements
+
+
+
