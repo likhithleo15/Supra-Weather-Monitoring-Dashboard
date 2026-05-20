@@ -1,0 +1,162 @@
+/* RESET & LOCK */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.dashboard-wrapper {
+  height: 100vh;
+  max-height: 100vh;
+  width: 100vw;
+  padding: 15px 25px; 
+  display: flex;
+  flex-direction: column;
+  background-color: #03050a;
+  background-image: 
+    linear-gradient(rgba(0, 234, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 234, 255, 0.04) 1px, transparent 1px);
+  background-size: 40px 40px;
+  overflow: hidden; /* ABSOLUTE LOCK - No scrolling allowed */
+}
+
+/* HEADER - 80px */
+.header {
+  font-size: 80px;
+  line-height: 0.85; /* Strips out invisible vertical space */
+  text-align: center;
+  letter-spacing: 4px;
+  font-weight: bold;
+  color: #00eaff;
+  border-bottom: 2px dashed rgba(0, 234, 255, 0.2);
+  padding-bottom: 15px;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  text-shadow: 0 0 15px rgba(0, 234, 255, 0.4);
+  flex-shrink: 0; /* Forces header to keep its height */
+  white-space: nowrap; /* Prevents text from breaking into two lines */
+}
+
+/* THE MAIN GRID */
+.main-grid {
+  display: grid;
+  grid-template-columns: 28vw 1fr 28vw; 
+  gap: 20px;
+  flex-grow: 1;
+  min-height: 0; /* CRITICAL: Allows the grid to shrink */
+  padding-bottom: 65px; /* Leaves room for the massive branding at the bottom */
+}
+
+.panel-column {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  height: 100%;
+  min-height: 0; /* CRITICAL: Allows panels to shrink */
+}
+
+/* CENTER GLOBE AREA */
+.center-panel {
+  position: relative;
+  border-radius: 50%;
+  min-height: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at center, rgba(0, 234, 255, 0.05) 0%, transparent 60%);
+}
+
+.globe-container {
+  position: absolute; /* Detaches globe from flex layout so it stops expanding */
+  top: 0; left: 0; right: 0; bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: grab;
+}
+.globe-container:active { cursor: grabbing; }
+
+/* PANELS */
+.cyber-panel {
+  background: rgba(8, 12, 20, 0.85);
+  border: 1px solid rgba(0, 234, 255, 0.15);
+  box-shadow: inset 0 0 20px rgba(0, 234, 255, 0.02);
+  position: relative;
+  padding: 10px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1; 
+  min-height: 0; /* CRITICAL */
+  overflow: hidden; /* Hides internal text overflow so it doesn't break boxes */
+}
+
+.chart-panel {
+  flex: 1.5; 
+}
+
+/* Panel Corner Accents */
+.cyber-panel::before, .cyber-panel::after {
+  content: '';
+  position: absolute;
+  width: 15px; height: 15px;
+}
+.cyber-panel::before { top: -2px; left: -2px; border-top: 3px solid #00eaff; border-left: 3px solid #00eaff; }
+.cyber-panel::after { bottom: -2px; right: -2px; border-bottom: 3px solid #00eaff; border-right: 3px solid #00eaff; }
+
+/* TYPOGRAPHY */
+.label {
+  font-size: 50px;
+  color: #7b9cba;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 5px;
+  font-weight: 600;
+  flex-shrink: 0;
+}
+
+/* VALUES - 80px */
+.value {
+  font-size: 80px; 
+  color: #ffffff;
+  font-weight: bold;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+  line-height: 0.85; /* Tightly packs the numbers vertically */
+  white-space: nowrap;
+}
+
+.value-small {
+  font-size: 60px;
+  color: #ffffff;
+  font-weight: bold;
+  line-height: 0.85;
+  white-space: nowrap;
+}
+
+.accent-text {
+  color: #00eaff;
+  text-shadow: 0 0 15px rgba(0, 234, 255, 0.4);
+}
+
+/* BOTTOM BRANDING - 65px */
+.branding {
+  position: absolute;
+  bottom: 5px; 
+  right: 25px;
+  font-size: 65px;
+  line-height: 0.8;
+  font-weight: bold;
+  color: #00eaff;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  z-index: 100;
+  text-shadow: 0 0 15px rgba(0, 234, 255, 0.8);
+  white-space: nowrap;
+}
+
+/* Chart Container Wrapper */
+.chart-wrapper {
+  flex-grow: 1;
+  position: relative;
+  min-height: 0; /* Forces Recharts to stay inside the box */
+  width: 100%;
+}
